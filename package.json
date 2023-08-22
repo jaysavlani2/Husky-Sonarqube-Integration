@@ -46,7 +46,9 @@
     "eslint": "^8.47.0",
     "husky": "^8.0.3"
   },
-  "hooks": {
-    "pre-commit": "npm run lint && npm run sonarqube"
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run sonarqube"
+    }
   }
 }
