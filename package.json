@@ -22,7 +22,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint src",
-    "sonarqube": "sonar-scanner"
+    "sonarqube-scan": "sonar-scanner"
   },
   "eslintConfig": {
     "extends": [
@@ -44,9 +44,12 @@
   },
   "devDependencies": {
     "eslint": "^8.47.0",
-    "husky": "^8.0.3"
+    "husky": "^8.0.3",
+    "sonarqube-scanner": "^3.0.1"
   },
-  "hooks": {
-    "pre-commit": "npm run lint && npm run sonarqube"
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run sonarqube-scan"
+    }
   }
 }
